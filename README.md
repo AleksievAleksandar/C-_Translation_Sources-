@@ -1,2 +1,2 @@
 # C++_Translation_Sources
-C++ wrapper of C -> book "Programming =++ Algorithms;" 
+C++ translation of C -> book "Programming =++ Algorithms;" 
