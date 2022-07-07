@@ -17,7 +17,7 @@ void print(const unsigned length)
     std::cout << mp[length] << std::endl;
 }
 
-void devNum(unsigned n, unsigned pos)
+void devNum(const unsigned n, const  unsigned pos)
 {
     for (size_t k = n; k > 1; k--)
     {
