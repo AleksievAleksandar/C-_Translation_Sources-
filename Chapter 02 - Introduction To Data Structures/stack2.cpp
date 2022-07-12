@@ -23,7 +23,7 @@ void push(data i)
 	}
 }
 
-data pop(void)
+data pop()
 {
 	if (0 == top) {
 		std::cerr << "Стекът е празен!" << std::endl;
