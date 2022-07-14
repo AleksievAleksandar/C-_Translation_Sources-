@@ -61,7 +61,7 @@ void insertKey(keyType key, const data x, tree** T)
 }
 
 /* Намиране на минималния елемент в дърво */
-struct tree* findMin(tree* T)
+tree* findMin(tree* T)
 {
     while (nullptr != T->left)
     {
@@ -71,7 +71,7 @@ struct tree* findMin(tree* T)
 }
 
 /* Изключване от двоично дърво */
-void deleteKey(keyType key, struct tree** T)
+void deleteKey(keyType key, tree** T)
 {
     if (nullptr == *T)
     {
@@ -93,14 +93,14 @@ void deleteKey(keyType key, struct tree** T)
             {
                 // Върхът има два наследника
                 // Намира се върхът за размяна
-                struct tree* replace = findMin((*T)->right);
+                tree* replace = findMin((*T)->right);
                 (*T)->key = replace->key;
                 (*T)->info = replace->info;
                 deleteKey((*T)->key, &(*T)->right);    /* Върхът се изключва */
             }
             else /* Елементът има нула или едно поддървета */
             {
-                struct tree* temp = *T;
+                tree* temp = *T;
                 if ((*T)->left)
                 {
                     *T = (*T)->left;
