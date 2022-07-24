@@ -22,7 +22,7 @@ void swap(CElem* x1, CElem* x2)
 
 void init(CElem m[], const unsigned n)             /* Запълва масива със случайни цели числа */
 {
-    srand(time(NULL));
+    srand(time(nullptr));
     for (size_t i = 0; i < n; i++)
     {
         m[i].key = rand() % n;
