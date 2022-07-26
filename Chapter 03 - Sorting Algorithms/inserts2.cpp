@@ -25,7 +25,7 @@ void init(CElem m[], const unsigned n) /* Запълва масива със с�
 void straightInsertion(CElem m[], const unsigned n)
 {
     unsigned j;
-    struct CElem x;
+    CElem x;
     for (size_t i = 1; i <= n; i++)
     {
         x = m[i]; m[0].key = x.key;
