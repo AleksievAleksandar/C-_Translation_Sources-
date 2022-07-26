@@ -28,7 +28,8 @@ void straightInsertion(CElem m[], const unsigned n)
     CElem x;
     for (size_t i = 1; i <= n; i++)
     {
-        x = m[i]; m[0].key = x.key;
+        x = m[i]; 
+        m[0].key = x.key;
         for (j = i - 1; x.key < m[j].key; j--)
         {
             m[j + 1] = m[j];
