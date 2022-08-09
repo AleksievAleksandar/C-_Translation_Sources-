@@ -2,8 +2,8 @@
 #include <iostream>
 #include <time.h>
 
-#define MAX           10
-#define TEST_LOOP_CNT 10
+#define MAX           100
+#define TEST_LOOP_CNT 100
 
 struct CElem
 {
@@ -39,7 +39,7 @@ void combSort(CElem m[], const unsigned n)
         {
             gap = 1;
         }
-        for (int i = 0; i < n - gap; i++)
+        for (size_t i = 0; i < n - gap; i++)
         {
             j = i + gap;
             if (m[i].key > m[j].key)
@@ -48,7 +48,7 @@ void combSort(CElem m[], const unsigned n)
                 s++;
             }
         }
-    } while (s || !gap);
+    } while (s != 0 || gap > 1);
 }
 
 void print(CElem m[], const unsigned n)            /* Извежда ключовете на масива на екрана */
